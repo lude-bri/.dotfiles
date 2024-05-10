@@ -1,4 +1,8 @@
 alias ll="ls -al"
+alias ga="git add"
+alias gst="git status"
+alias gc="git commit -m"
+alias gp="git push"
 
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
@@ -10,3 +14,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
+[ -d "$HOME/sgoinfre/Homebrew/bin" ] &&
+export PATH="$PATH:$HOME/sgoinfre/Homebrew/bin"
