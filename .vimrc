@@ -4,6 +4,7 @@ syntax on
 set nu
 " Set row numbers as visible
 set ru
+set relativenumber
 " Allow cursor movement by clicking
 set mouse=a
 
