@@ -17,3 +17,13 @@ compinit
 
 [ -d "$HOME/sgoinfre/Homebrew/bin" ] &&
 export PATH="$PATH:$HOME/sgoinfre/Homebrew/bin"
+
+############################
+### Load Starship Prompt ###
+############################
+
+if command -v starship > /dev/null 2>&1; then
+    eval "$(starship init zsh)"
+else
+    ZSH_THEME="refined"
+fi
