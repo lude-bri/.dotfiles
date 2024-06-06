@@ -1,3 +1,9 @@
+" Settings
+set foldclose=all
+
+" DO NOT USE SWAP FILES
+set noswapfile
+
 " Activate vim syntax coloring
 syntax on
 " Set line numbers as visible
@@ -43,7 +49,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'dracula/vim', { 'as': 'dracula'}
+
 
 call plug#end()
 
 let g:airline_powerline_fonts = 1
+
+" Colour
+
+colorscheme ron
+
+

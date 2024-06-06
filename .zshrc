@@ -2,6 +2,9 @@
 #       ALIAS         #
 #######################       
 
+## Neovim
+alias v="nvim"
+
 ##clear
 alias cl="clear"
 
@@ -16,6 +19,11 @@ alias gp="git push"
 
 ## exit terminal
 alias x="exit"
+
+## kitty alias
+if [[ $USER == "lude-bri" ]]; then
+	alias kitty=~/.local/kitty.app/bin/kitty
+fi
 
 #######################
 #        ZAP          #
@@ -34,6 +42,7 @@ compinit
 
 [ -d "$HOME/sgoinfre/Homebrew/bin" ] &&
 export PATH="$PATH:$HOME/sgoinfre/Homebrew/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 ############################
 ### Load Starship Prompt ###
