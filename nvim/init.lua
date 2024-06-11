@@ -10,3 +10,4 @@ require("luigi.core.autocmd")
 require("luigi.core.macros")
 -- Lazy Plugin Manager
 require("luigi.lazy")
+
