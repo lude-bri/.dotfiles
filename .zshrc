@@ -16,6 +16,7 @@ alias ga="git add"
 alias gst="git status"
 alias gc="git commit -m"
 alias gp="git push"
+alias glgg="git log --graph --oneline --decorate"
 
 ## exit terminal
 alias x="exit"
