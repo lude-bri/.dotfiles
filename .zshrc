@@ -55,4 +55,11 @@ PROMPT='%F{green}% %BI am Luigi%b %f %F{yellow}% (%f %F{red}% not Mario%f %F{yel
 #then
 #   eval "$(starship init zsh)"
 #else
-#ZSH_THEME="refined"
+#######################################
+
+#####################################
+### Clear google-chrome ingleton* ###
+#####################################
+if [[ -f ~/.config/google-chrome/Singleton* ]]; then
+	rm -rf ~/.config/google-chrome/Singleton*
+fi
