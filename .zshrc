@@ -4,6 +4,7 @@
 
 ## Neovim
 alias v="nvim"
+alias clear_nvim="rm -rf ~/.local/share/nvim"
 
 ##clear
 alias cl="clear"

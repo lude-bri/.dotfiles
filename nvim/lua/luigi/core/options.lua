@@ -51,6 +51,7 @@ opt.cursorline = true
 opt.clipboard = "unnamedplus"
 
 -- swapfiles
-
 opt.swapfile = false
 
+-- terminal colors
+opt.termguicolors = true
