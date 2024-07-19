@@ -7,7 +7,6 @@ return {
 		vim.api.nvim_command([[
 			highlight Normal guibg=none
 			highlight @variable guifg=#ffffff
-			highlight DevIconC guifg=#8426ff
 			highlight NonText guibg=#000000
 			highlight Search guibg=#34eb34
 			highlight CurSearch guibg=#34eb34 guifg=#8426ff
