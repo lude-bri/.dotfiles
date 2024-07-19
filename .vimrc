@@ -50,6 +50,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim', { 'as': 'dracula'}
+Plug 'linusng/green-shades.vim'
 
 
 call plug#end()
@@ -58,5 +59,5 @@ let g:airline_powerline_fonts = 1
 
 " Colour
 
-colorscheme dracula
+colorscheme green-shades
 

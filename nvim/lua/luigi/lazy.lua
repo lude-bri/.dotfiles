@@ -21,7 +21,7 @@ require("lazy").setup({
 	{ import = 'luigi.plugins.lsp' },
 }, {
 	install = {
-		colorscheme = { "dracula" },
+		colorscheme = { "matrix" },
 	},
 	checker = {
 		enabled = true,
@@ -31,3 +31,4 @@ require("lazy").setup({
 		notify = false,
 	},
 })
+

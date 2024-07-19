@@ -49,3 +49,8 @@ opt.cursorline = true
 
 -- sync with system Clipboard (through + register)
 opt.clipboard = "unnamedplus"
+
+-- swapfiles
+
+opt.swapfile = false
+
