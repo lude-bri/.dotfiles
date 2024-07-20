@@ -1,12 +1,24 @@
 return {
+-- highlight @variable guifg=#ffffff
 	'iruzo/matrix-nvim',
 	priority = 10,
 	config = function ()
 		local matrix = require("matrix.util")
 		matrix.load()
 		vim.api.nvim_command([[
-			highlight Normal guibg=none
-			highlight @variable guifg=#ffffff
+			highlight @variable	guifg=#ffffff
+			highlight Number	guifg=#137be1
+			highlight Comment      guifg=#40a040
+			highlight Function		guifg=#e6e600
+			highlight Constant     guifg=#008800                
+			highlight StringConstant guifg=#008800 		
+			highlight Special      guifg=#30ff30          
+			highlight Identifier   guifg=#007000         
+			highlight Statement    guifg=#40ff40          gui=none
+			highlight PreProc      guifg=#00c000
+			highlight Operator     guifg=#30ff30                 ctermfg=yellow
+			highlight Normal	guifg=#00d000  ctermfg=82      ctermbg=black
+			highlight Type   guifg=#30ff30  ctermfg=154   gui=none
 			highlight NonText guibg=#000000
 			highlight Search guibg=#34eb34
 			highlight CurSearch guibg=#34eb34 guifg=#8426ff
@@ -573,6 +585,12 @@ return {
 			highlight DevIconPy       ctermfg=214 guifg=#ffbc03
 			highlight DevIconXorgConf  ctermfg=196 guifg=#e54d18
 			highlight DevIconZshenv   ctermfg=113 guifg=#89e051
+			highlight link Function Identifier
+			highlight link Include PreProc
+			highlight link Define PreProc
+			highlight link StorageClass   Type
+			highlight link Structure      Type
+			highlight link Typedef        Type
 		]])
 	end,
 }
