@@ -10,47 +10,47 @@ return {
 			highlight Number	guifg=#137be1
 			highlight Comment      guifg=#40a040
 			highlight Function		guifg=#e6e600
-			highlight Constant     guifg=#008800                
-			highlight StringConstant guifg=#008800 		
-			highlight Special      guifg=#30ff30          
-			highlight Identifier   guifg=#007000         
-			highlight Statement    guifg=#40ff40          gui=none
+			highlight Constant     guifg=#008800
+			highlight StringConstant guifg=#008800
+			highlight Special      guifg=#30ff30
+			highlight Identifier   guifg=#007000
+			highlight Statement    guifg=#40ff40
 			highlight PreProc      guifg=#00c000
-			highlight Operator     guifg=#30ff30                 ctermfg=yellow
-			highlight Normal	guifg=#00d000  ctermfg=82      ctermbg=black
-			highlight Type   guifg=#30ff30  ctermfg=154   gui=none
+			highlight Operator     guifg=#30ff30
+			highlight Normal	guifg=#00d000 guibg=#000000
+			highlight Type   guifg=#30ff30
 			highlight NonText guibg=#000000
 			highlight Search guibg=#34eb34
 			highlight CurSearch guibg=#34eb34 guifg=#8426ff
 			highlight WhichKey guifg=#34eb43
-			highlight WhichKeyFloat guibg=#000001
-			highlight WhichKeySeparator guifg=#8426ff
+			highlight WhichKeyFloat guibg=#000000
+			highlight WhichKeySeparator guifg=#8426ff guibg=#000000
 			highlight TelescopeNormal guibg=#000000
 			highlight TelescopeSelection guibg=#674b94 guifg=#000000
 			highlight TelescopePreviewBorder guifg=#34eb43
 			highlight TelescopeResultsBorder guifg=#34eb43
-			highlight TelescopePromptBorder guifg=#34eb43
 			highlight TelescopeBorder guifg=#e6e600
 			highlight TermCursor guifg=#34eb43
 			highlight NormalFloat guibg=#000000
 			highlight WinSeparator guifg=#8426ff guibg=#000000
 			highlight FloatBorder guifg=#e8eb34 guibg=#000000
 			highlight NotifyBackground guibg=#000000
-			highlight NoiceCmdlinePopupBorder guifg=#34eb43
-			highlight NoiceCmdlineIcon guifg=#e6e600
+			highlight NoiceCmdlinePopupBorder guifg=#34eb43 guibg=#000000
+			highlight NoiceCmdlineIcon guifg=#e6e600 guibg=#000000
 			highlight BufferLineFill guibg=#000000
 			highlight StatusLine guibg=#000000
-			highlight NvimTreeWinSeparator guifg=#8426ff guibg=#000000
+			highlight SignColumn guibg=#000000
+			highlight NvimTreeWinSeparator guifg=#8426ff
 			highlight NvimTreeFolderArrowClosed guifg=#34eb43
 			highlight NvimTreeFolderArrowOpen guifg=#34eb43
 			highlight NvimTreeIndentMarker guifg=#e8eb34
-			highlight NvimTreeNormal guibg=NONE ctermbg=NONE
-			highlight NvimTreeRootFolder guibg=NONE ctermbg=NONE guifg=#69FF94
+			highlight NvimTreeNormal guibg=#000000 ctermbg=NONE guibg=#000000
+			highlight NvimTreeRootFolder guibg=#000000 ctermbg=NONE guifg=#69FF94
 			highlight CursorLineNr guifg=#e8eb34
 			highlight NvimTreeLineNr guifg=#34eb43
 			highlight LineNr guifg=#D6ACFF
-			highlight LspFloatWinBorder guifg=#e8eb34
-			highlight LspInfoBorder guifg=#e8eb34
+			highlight LspFloatWinBorder guifg=#e8eb34 guibg=#000000
+			highlight LspInfoBorder guifg=#e8eb34 guibg=#000000
 			highlight DevIconDefault ctermfg=66 guifg=#6d8086
 			highlight DevIconObjectFile ctermfg=124 guifg=#9f0500
 			highlight DevIconNixOS   ctermfg=110 guifg=#7ab1db
