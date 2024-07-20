@@ -1,5 +1,4 @@
 return {
--- highlight @variable guifg=#ffffff
 	'iruzo/matrix-nvim',
 	priority = 10,
 	config = function ()
