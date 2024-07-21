@@ -5,22 +5,21 @@ return {
 		local matrix = require("matrix.util")
 		matrix.load()
 		vim.api.nvim_command([[
-			highlight @variable	guifg=#ffffff
-			highlight Number	guifg=#137be1
-			highlight Comment      guifg=#40a040
-			highlight Function		guifg=#e6e600
-			highlight Constant     guifg=#008800
-			highlight StringConstant guifg=#008800
-			highlight Special      guifg=#30ff30
-			highlight Identifier   guifg=#007000
-			highlight Statement    guifg=#40ff40
-			highlight PreProc      guifg=#00c000
-			highlight Operator     guifg=#30ff30
-			highlight Normal	guifg=#00d000 guibg=#000000
-			highlight Type   guifg=#30ff30
-			highlight NonText guibg=#000000
-			highlight Search guibg=#34eb34
-			highlight CurSearch guibg=#34eb34 guifg=#8426ff
+			highlight Type guifg=#00ff00
+			highlight FormatSpecifier guifg=#00ff00
+			highlight @type.builtin guifg=#12e193
+			highlight @variable guifg=#00ff00
+			highlight @string guifg=#12E1b9
+			highlight PreProc guifg=#e6e600
+			highlight Operator guifg=#e6e600
+			highlight PreCondit guifg=#e6e600
+			highlight Delimiter guifg=#90ee00
+			highlight Number guifg=#1589ff
+			highlight Keyword guifg=#77d777
+			highlight Constant guifg=#86eea8
+			highlight Statement guifg=#a8e890
+			highlight Normal guifg=#00ff00 guibg=#000000
+			highlight Function guifg=#ccfb5d
 			highlight WhichKey guifg=#34eb43
 			highlight WhichKeyFloat guibg=#000000
 			highlight WhichKeySeparator guifg=#8426ff guibg=#000000
@@ -584,12 +583,6 @@ return {
 			highlight DevIconPy       ctermfg=214 guifg=#ffbc03
 			highlight DevIconXorgConf  ctermfg=196 guifg=#e54d18
 			highlight DevIconZshenv   ctermfg=113 guifg=#89e051
-			highlight link Function Identifier
-			highlight link Include PreProc
-			highlight link Define PreProc
-			highlight link StorageClass   Type
-			highlight link Structure      Type
-			highlight link Typedef        Type
 		]])
 	end,
 }
