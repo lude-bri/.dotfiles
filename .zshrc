@@ -26,6 +26,7 @@ alias x="exit"
 if [[ $USER == "lude-bri" ]]; then
 	alias kitty=~/.local/kitty.app/bin/kitty
 fi
+alias k="kitty --start-as=fullscreen"
 
 #######################
 #        ZAP          #
