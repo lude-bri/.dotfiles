@@ -5,6 +5,7 @@ return {
 		local matrix = require("matrix.util")
 		matrix.load()
 		vim.api.nvim_command([[
+			highlight @lsp.type.parameter guifg=#34eb43
 			highlight Type guifg=#00ff00
 			highlight FormatSpecifier guifg=#00ff00
 			highlight @type.builtin guifg=#12e193
