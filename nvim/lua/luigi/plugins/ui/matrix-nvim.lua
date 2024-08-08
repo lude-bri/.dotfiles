@@ -6,9 +6,7 @@ return {
 		matrix.load()
 		vim.api.nvim_command([[
 			highlight @lsp.type.parameter guifg=#34eb43
-			highlight Type guifg=#00ff00
-			highlight FormatSpecifier guifg=#00ff00
-			highlight @type.builtin guifg=#12e193
+			highlight @type.builtin guifg=#69ff93
 			highlight @variable guifg=#00ff00
 			highlight @string guifg=#12E1b9
 			highlight PreProc guifg=#e6e600
