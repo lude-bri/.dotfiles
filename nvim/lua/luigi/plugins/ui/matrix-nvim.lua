@@ -5,9 +5,8 @@ return {
 		local matrix = require("matrix.util")
 		matrix.load()
 		vim.api.nvim_command([[
-			highlight Type guifg=#00ff00
-			highlight FormatSpecifier guifg=#00ff00
-			highlight @type.builtin guifg=#12e193
+			highlight @lsp.type.parameter guifg=#34eb43
+			highlight @type.builtin guifg=#69ff93
 			highlight @variable guifg=#00ff00
 			highlight @string guifg=#12E1b9
 			highlight PreProc guifg=#e6e600
@@ -19,7 +18,7 @@ return {
 			highlight Constant guifg=#86eea8
 			highlight Statement guifg=#a8e890
 			highlight Normal guifg=#00ff00 guibg=#000000
-			highlight Function guifg=#ccfb5d
+			highlight Function guifg=#ccfb5f
 			highlight WhichKey guifg=#34eb43
 			highlight WhichKeyFloat guibg=#000000
 			highlight WhichKeySeparator guifg=#8426ff guibg=#000000
