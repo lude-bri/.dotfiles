@@ -7,6 +7,7 @@ return {
 		vim.api.nvim_command([[
 			highlight Type guifg=#00ff00
 			highlight FormatSpecifier guifg=#00ff00
+			highlight @lsp.type.parameter guifg=#77d777
 			highlight @type.builtin guifg=#12e193
 			highlight @variable guifg=#00ff00
 			highlight @string guifg=#12E1b9
