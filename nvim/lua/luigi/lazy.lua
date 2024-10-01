@@ -20,9 +20,9 @@ require("lazy").setup({
 	{ import = 'luigi.plugins.git' },
 	{ import = 'luigi.plugins.lsp' },
 }, {
-	-- install = {
-	-- 	colorscheme = { "matrix" },
-	-- },
+	install = {
+		colorscheme = { "tokyonight-night" },
+	},
 	checker = {
 		enabled = true,
 		notify = false,
