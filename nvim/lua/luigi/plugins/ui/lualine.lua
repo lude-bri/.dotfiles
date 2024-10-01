@@ -1,13 +1,16 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = { 
+		"nvim-tree/nvim-web-devicons",
+		"archibate/lualine-time"
+	},
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
 		lualine.setup({
 			options = {
-				theme = 'palenight',
+				theme = 'horizon',
 				component_separators = { left = '', right = '' },
 				-- component_separators = { left = '⵰', right = '⵰' },
 				section_separators = { left = '', right = '' },
@@ -48,7 +51,7 @@ return {
 					{ "filetype" },
 				},
 				lualine_y = { 'progress' },
-				lualine_z = { 'location' },
+				lualine_z = { 'location', 'ctime' },
 			},
 			inactive_sections = {
 				lualine_a = {},
