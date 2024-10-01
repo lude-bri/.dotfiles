@@ -11,6 +11,6 @@ require("luigi.core.macros")
 -- Lazy Plugin Manager
 require("luigi.lazy")
 --
--- vim.cmd [[
--- 	colorscheme dracula
--- ]]
+vim.cmd [[
+	colorscheme tokyonight-night
+]]

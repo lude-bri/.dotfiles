@@ -41,9 +41,12 @@ return {
 				row = 0,
 				col = 1
 			},
+<<<<<<< HEAD
 			-- yadm = {
 			--enable = false
 			--	},
+=======
+>>>>>>> bf0eac37448b9077580645c574480c67552016ac
 		}
 	end,
 }

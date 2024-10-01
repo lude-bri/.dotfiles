@@ -52,12 +52,15 @@ export PATH="$HOME/.local/bin:$PATH"
 ############################
 
 
-PROMPT='%F{green}% %BI am Luigi%b %f %F{yellow}% (%f %F{red}% not Mario%f %F{yellow}%)%f %F{blue}% %B%C%b %f %F{yellow}% %B->%b%f %F{red}${vcs_info_msg_0_}%f% '
+# PROMPT='%F{green}% %BI am Luigi%b %f %F{yellow}% (%f %F{red}% not Mario%f %F{yellow}%)%f %F{blue}% %B%C%b %f %F{yellow}% %B->%b%f %F{red}${vcs_info_msg_0_}%f% '
 
-#command -v starship > /dev/null 2>&1;
-#then
-#   eval "$(starship init zsh)"
-#else
+if command -v starship > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+else
+  echo "Starship is not installed"
+fi
+
+
 #######################################
 
 #####################################
