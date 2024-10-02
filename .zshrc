@@ -10,7 +10,8 @@ alias clear_nvim="rm -rf ~/.local/share/nvim"
 alias cl="clear"
 
 ## lists
-alias ll="ls -al"
+alias ll="lsd -la"
+alias l="lsd"
 
 ## gits
 alias ga="git add"
