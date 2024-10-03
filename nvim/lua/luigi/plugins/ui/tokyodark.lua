@@ -17,7 +17,11 @@ return {
     custom_highlights = function(highlights, palette)
       highlights["@property"] = { fg = "#eefc57"}  -- Custom highlight for Treesitter @property
       highlights["@parameter"] = { fg = "#f6705b" } -- Custom highlight for Treesitter @parameter
-      highlights.WinSeparator = { fg = "#8426ff" }  -- Custom highlight for window separator
+      highlights.WinSeparator = { fg = "#8426ff" } -- Custom highlight for window separator
+      highlights.TelescopePreviewBorder = {fg = "#34eb43"}
+      highlights.TelescopeResultsBorder = {fg = "#645dd7"}
+      highlights.TelescopePromptBorder = {fg = "#e6e600"}
+      highlights.FloatBorder = {fg = "#645dd7"}
       return highlights
     end,
     -- Optionally, you can also adjust the color palette here
