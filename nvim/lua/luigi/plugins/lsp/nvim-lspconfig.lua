@@ -27,7 +27,6 @@ return {
 			{ "╰", "LspFloatBorder" },
 			{ "│", "LspFloatBorder" },
 		}
-
 		require('mason').setup({})
 		require("mason-lspconfig").setup({
 			ensure_installed = { "clangd", "lua_ls" },
@@ -109,7 +108,6 @@ return {
 				end
 			},
 		})
-
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
 		for type, icon in pairs(signs) do
@@ -185,7 +183,6 @@ return {
 						return true
 					end,
 				}
-
 				pickers.new(dropdown, lc_opts):find()
 			end, { desc = "[L]sp [C]onfig" })
 		end
