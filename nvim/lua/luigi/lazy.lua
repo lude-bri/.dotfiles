@@ -21,7 +21,7 @@ require("lazy").setup({
 	{ import = 'luigi.plugins.lsp' },
 }, {
 	install = {
-		colorscheme = { "tokyonight-night" },
+		colorscheme = { "tokyodark" },
 	},
 	checker = {
 		enabled = true,
