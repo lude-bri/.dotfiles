@@ -32,19 +32,3 @@ return {
     vim.cmd [[colorscheme tokyodark]] -- Apply the tokyodark colorscheme
   end,
 }
-
-
-
--- "tiagovla/tokyodark.nvim",
--- priority = 1000,
--- opts = {
---     -- custom options here
--- },
--- config = function(_, opts)
---     require("tokyodark").setup(opts) -- calling setup is optional
---     vim.cmd [[
---       colorscheme tokyodark
---       highlight   WinSeparator guifg=#8426ff
---       highlight   Constant guifg=#00ff00
---       ]]
--- end,
