@@ -15,8 +15,8 @@ return {
     },
     -- Custom highlights for Treesitter
     custom_highlights = function(highlights, palette)
-      highlights["@property"] = { fg = "#eefc57"}  -- Custom highlight for Treesitter @property
-      highlights["@parameter"] = { fg = "#f6705b" } -- Custom highlight for Treesitter @parameter
+      highlights["@property"] = { fg = "#5BF5AE"}  -- Custom highlight for Treesitter @property
+      highlights["@parameter"] = { fg = "#f56f5b" } -- Custom highlight for Treesitter @parameter
       highlights.WinSeparator = { fg = "#8426ff" } -- Custom highlight for window separator
       highlights.TelescopePreviewBorder = {fg = "#34eb43"}
       highlights.TelescopeResultsBorder = {fg = "#645dd7"}
@@ -36,3 +36,5 @@ return {
     vim.cmd [[colorscheme tokyodark]] -- Apply the tokyodark colorscheme
   end,
 }
+
+-- EEFC57
