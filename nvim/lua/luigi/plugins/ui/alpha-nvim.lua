@@ -36,7 +36,7 @@ return {
     }
     -- footer
     -- dashboard.section.footer.val = "Footer Z"
-    dashboard.section.footer.val = "󰟪'ed by lude-bri"
+    dashboard.section.footer.val = "󰟪 made by lude-bri"
     --
     -- Send config to alpha
     alpha.setup(dashboard.opts)
