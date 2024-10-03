@@ -12,5 +12,5 @@ require("luigi.core.macros")
 require("luigi.lazy")
 --
 vim.cmd [[
-	colorscheme tokyonight-night
+	colorscheme tokyodark
 ]]
