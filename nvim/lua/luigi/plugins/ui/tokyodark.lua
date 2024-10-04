@@ -16,7 +16,7 @@ return {
     -- Custom highlights for Treesitter
     custom_highlights = function(highlights, palette)
       highlights["@property"] = { fg = "#5BF5AE"}  -- Custom highlight for Treesitter @property
-      highlights["@parameter"] = { fg = "#f56f5b" } -- Custom highlight for Treesitter @parameter
+      highlights["@parameter"] = { fg = "#F6CF78" } -- Custom highlight for Treesitter @parameter
       highlights.WinSeparator = { fg = "#8426ff" } -- Custom highlight for window separator
       highlights.TelescopePreviewBorder = {fg = "#34eb43"}
       highlights.TelescopeResultsBorder = {fg = "#645dd7"}
@@ -41,4 +41,4 @@ return {
   end,
 }
 
--- EEFC57
+-- to @parameter i like those #f18f01 #F6CF78 #DF8601

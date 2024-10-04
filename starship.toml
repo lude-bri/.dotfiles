@@ -7,7 +7,7 @@ format = '''
 $directory$git_branch$git_commit$git_status$c$cmd_duration$shlvl
 $jobs$hostname$username $shell $character
 '''
-right_format = "$status${custom.minitalk}${custom.valgrind}$localip$time $battery$os"
+right_format = "$status${custom.valgrind}$localip$time $battery$os"
 
 continuation_prompt = '▶▶ '
 # Don't print a new line at the start of the prompt
