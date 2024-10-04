@@ -11,6 +11,8 @@ require("luigi.core.macros")
 -- Lazy Plugin Manager
 require("luigi.lazy")
 --
+require'lspconfig'.pyright.setup{}
+
 vim.cmd [[
 	colorscheme tokyodark
 ]]

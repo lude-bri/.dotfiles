@@ -25,6 +25,7 @@ return {
       highlights.NormalFloat = {fg = "#645dd7"}
       highlights.LspFloatWinBorder = {fg = "#645dd7"}
       highlights.LspInfoBorder = {fg = "#645dd7"}
+      highlights.LspFloatBorder = {fg = "#645dd7"}
       return highlights
     end,
     -- Optionally, you can also adjust the color palette here
