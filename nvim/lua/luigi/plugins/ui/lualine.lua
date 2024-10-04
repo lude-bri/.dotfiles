@@ -51,7 +51,7 @@ return {
 					{ "filetype" },
 				},
 				lualine_y = { 'progress' },
-				lualine_z = { 'location', 'ctime' },
+				lualine_z = { 'location' },
 			},
 			inactive_sections = {
 				lualine_a = {},
