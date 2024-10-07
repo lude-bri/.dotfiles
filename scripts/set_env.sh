@@ -13,6 +13,5 @@ tmux new-window -t LUIGI:2 -n push_swap
 tmux send-keys -t LUIGI:2 'cd $HOME/CC/Rank2/push_swap/'
 tmux send-keys -t LUIGI:2 'clear' C-m
 
-
 # Attach to the tmux session
 tmux attach-session -t LUIGI
