@@ -12,7 +12,7 @@ vim.cmd([[
 ]])
 
   local Ascii = {
-      ops = { position = "center" },
+      ops = { position = "center", colors = "#00ff00" },
       [[
 ⡴⠒⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠉⠳⡆⠀
 ⣇⠰⠉⢙⡄⠀⠀⣴⠖⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠁⠙⡆
@@ -287,7 +287,7 @@ Look at me... I'm fine, right? Now, code.
 
     math.randomseed(os.time())
     dashboard.section.header.val = Ascii[math.random(#Ascii)]
-
+    -- dashboard.section.header.opts = { hl = { {"GreenHLGroup",0,12}, {"BlueHLGroup",13,20} } } 
     -- Set menu
     dashboard.section.buttons.val = {
       dashboard.button("n", "  > New file", ":ene <BAR> startinsert <CR>"),
