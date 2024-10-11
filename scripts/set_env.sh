@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Create a new tmux session named "LUIGI" and detach immediately
 tmux new-session -d -s LUIGI
