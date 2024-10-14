@@ -1,9 +1,14 @@
 #!/bin/bash
 
-# Function to prompt Yes/No questions
+# Arrays to track successes and failures
+successful=()
+failed=()
+
+# Function to prompt Yes/No questions with green text
 function prompt() {
   while true; do
-    read -p "$1 [Y/N]: " choice
+    echo -e "$(tput setaf 2)$1 [Y/N]:$(tput sgr0)"
+    read -p "" choice
     case "$choice" in
       [Yy]* ) return 0;;
       [Nn]* ) return 1;;
@@ -12,11 +17,12 @@ function prompt() {
   done
 }
 
-# Function to print a message and exit on error
-function check_error {
-  if [ $? -ne 0 ]; then
-    echo "Error: $1"
-    exit 1
+# Function to log success or failure
+function log_result {
+  if [ $? -eq 0 ]; then
+    successful+=("$1")
+  else
+    failed+=("$1")
   fi
 }
 
@@ -24,50 +30,45 @@ function check_error {
 function check_homebrew {
   if command -v brew &> /dev/null; then
     echo "Homebrew is already installed."
+    successful+=("Homebrew")
   else
     install_homebrew
   fi
 }
 
-# Install Homebrew with sudo permissions
+# Install Homebrew with the specific commands
 function install_homebrew {
   echo "Installing Homebrew..."
-  if [ "$EUID" -eq 0 ]; then
-    echo "You have sudo permissions."
-    git clone https://github.com/Homebrew/brew homebrew
-    eval "$(homebrew/bin/brew shellenv)"
-    brew update --force --quiet
-    chmod -R go-w "$(brew --prefix)/share/zsh"
-    check_error "Failed to install Homebrew."
-  else
-    echo "You do not have sudo permissions, installing Homebrew locally..."
-    mkdir -p ~/.local/Homebrew &&
-    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C ~/.local/Homebrew
-    mkdir -p ~/.local/bin &&
-    ln -s ~/.local/Homebrew/bin/brew ~/.local/bin
-    check_error "Failed to install Homebrew locally."
-  fi
+  git clone https://github.com/Homebrew/brew homebrew
+  log_result "Homebrew clone"
+  
+  eval "$(homebrew/bin/brew shellenv)"
+  log_result "Homebrew shell environment"
+
+  brew update --force --quiet
+  chmod -R go-w "$(brew --prefix)/share/zsh"
+  log_result "Homebrew update"
 }
 
 # Function to install Kitty
 function install_kitty {
   echo "Installing Kitty..."
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-  check_error "Failed to install Kitty."
+  log_result "Kitty"
 }
 
 # Function to install Neovim
 function install_neovim {
   echo "Installing Neovim..."
   brew install neovim
-  check_error "Failed to install Neovim."
+  log_result "Neovim"
 }
 
 # Clone dotfiles
 function clone_dotfiles {
   echo "Cloning dotfiles..."
   git clone https://github.com/lude-bri/.dotfiles.git ~/.dotfiles
-  check_error "Failed to clone dotfiles."
+  log_result "Dotfiles clone"
 }
 
 # Create symlinks for various configurations
@@ -81,13 +82,14 @@ function setup_symlinks {
   ln -sf ~/.dotfiles/.vimrc ~/.vimrc
   ln -sf ~/.dotfiles/nvim/ ~/.config/nvim
   ln -sf ~/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+  log_result "Symlinks"
 }
 
 # Install Starship prompt
 function install_starship {
   echo "Installing Starship prompt..."
   curl -sS https://starship.rs/install.sh | sh
-  check_error "Failed to install Starship."
+  log_result "Starship"
 }
 
 # Install Vim Plug
@@ -96,14 +98,14 @@ function install_vim_plug {
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   mkdir -p ~/.vim ~/.vim/autoload ~/.vim/backup ~/.vim/colors ~/.vim/plugged
-  check_error "Failed to install vim-plug."
+  log_result "Vim Plug"
 }
 
 # Install Tmux
 function install_tmux {
   echo "Installing Tmux..."
   brew install tmux
-  check_error "Failed to install Tmux."
+  log_result "Tmux"
 }
 
 # Install Oh My Tmux
@@ -111,7 +113,7 @@ function install_oh_my_tmux {
   echo "Installing Oh My Tmux..."
   git clone https://github.com/gpakosz/.tmux.git
   ln -sf .tmux/.tmux.conf ~/
-  check_error "Failed to install Oh My Tmux."
+  log_result "Oh My Tmux"
 }
 
 # Install Tmux Plugin Manager
@@ -127,6 +129,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 run '~/.tmux/plugins/tpm/tpm'
 EOF
   tmux source ~/.tmux.conf
+  log_result "TMUX Plugin Manager"
 }
 
 # Install Nerdfont and additional terminal tools
@@ -134,6 +137,7 @@ function install_terminal_tools {
   echo "Installing terminal tools..."
   brew install nerdfetch
   brew install --cask font-fira-code-nerd-font
+  log_result "Nerdfetch & Nerd Fonts"
 }
 
 # Install LazyVim
@@ -141,6 +145,24 @@ function install_lazyvim {
   echo "Installing LazyVim..."
   git clone https://github.com/LazyVim/starter ~/.config/nvim
   rm -rf ~/.config/nvim/.git
+  log_result "LazyVim"
+}
+
+# Function to display the final relatory
+function display_relatory {
+  echo ""
+  echo "===================== Installation Summary ====================="
+  echo "Successful installations:"
+  for app in "${successful[@]}"; do
+    echo -e "$(tput setaf 2)- $app$(tput sgr0)"
+  done
+
+  echo ""
+  echo "Failed installations:"
+  for app in "${failed[@]}"; do
+    echo -e "$(tput setaf 1)- $app$(tput sgr0)"
+  done
+  echo "================================================================"
 }
 
 # Main setup function
@@ -192,7 +214,7 @@ function main {
     install_terminal_tools
   fi
 
-  echo "Setup completed!"
+  display_relatory
 }
 
 main
