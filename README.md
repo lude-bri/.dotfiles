@@ -90,7 +90,7 @@ Once this is done, it's time to `git clone` my config and setup to our tools.
 
 ## Clone my dotfiles
 ```bash
-https://github.com/lude-bri/.dotfiles.git  ~/.dotfiles
+git clone https://github.com/lude-bri/.dotfiles.git  ~/.dotfiles
 ```
 ## Creating symlinks
 
@@ -198,3 +198,28 @@ Hopefully that works! Otherwise, try installing manually right here: https://www
 And that's it!!
 
 # Part 3. Script
+
+## How to use it
+First, get this repository
+
+```bash
+git clone https://github.com/lude-bri/.dotfiles.git  ~/.dotfiles
+```
+
+Then, inside of the directory `.dotfiles` make the script exectuable
+
+```bash
+chmod +x setup.sh
+```
+
+And run the script
+
+```bash
+./setup.sh
+```
+
+
+
+
+
+
