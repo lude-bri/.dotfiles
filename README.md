@@ -1,5 +1,5 @@
 # My Setup
 
 <p align="center">
-	<img src="images/setup.jpg">
+	<img src="images/setup.png">
 </p>
