@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Function to prompt Yes/No questions
+function prompt() {
+  while true; do
+    read -p "$1 [Y/N]: " choice
+    case "$choice" in
+      [Yy]* ) return 0;;
+      [Nn]* ) return 1;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
 # Function to print a message and exit on error
 function check_error {
   if [ $? -ne 0 ]; then
@@ -134,18 +146,52 @@ function install_lazyvim {
 # Main setup function
 function main {
   echo "Starting setup..."
-  check_homebrew
-  install_kitty
-  install_neovim
-  clone_dotfiles
-  setup_symlinks
-  install_starship
-  install_vim_plug
-  install_tmux
-  install_oh_my_tmux
-  install_tpm
-  install_lazyvim
-  install_terminal_tools
+
+  if prompt "Now Installing Homebrew. Would you like to install?"; then
+    check_homebrew
+  fi
+
+  if prompt "Now Installing Kitty. Would you like to install?"; then
+    install_kitty
+  fi
+
+  if prompt "Now Installing Neovim. Would you like to install?"; then
+    install_neovim
+  fi
+
+  if prompt "Now Cloning Dotfiles. Would you like to clone?"; then
+    clone_dotfiles
+    setup_symlinks
+  fi
+
+  if prompt "Now Installing Starship prompt. Would you like to install?"; then
+    install_starship
+  fi
+
+  if prompt "Now Installing Vim Plug. Would you like to install?"; then
+    install_vim_plug
+  fi
+
+  if prompt "Now Installing Tmux. Would you like to install?"; then
+    install_tmux
+  fi
+
+  if prompt "Now Installing Oh My Tmux. Would you like to install?"; then
+    install_oh_my_tmux
+  fi
+
+  if prompt "Now Installing Tmux Plugin Manager. Would you like to install?"; then
+    install_tpm
+  fi
+
+  if prompt "Now Installing LazyVim. Would you like to install?"; then
+    install_lazyvim
+  fi
+
+  if prompt "Now Installing terminal tools (Nerdfetch and Nerd Fonts). Would you like to install?"; then
+    install_terminal_tools
+  fi
+
   echo "Setup completed!"
 }
 
