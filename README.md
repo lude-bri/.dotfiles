@@ -9,6 +9,21 @@
 
 To make the config for my setup we're going to need some tools: Homebrew (to manage the apps), Kitty (the terminal that we're going to work) and Neovim(the main text editor).
 
+If you want to do manually, follow Part 1 and 2. Otherwise, you can just run the script in Part 3
+
+# Index
+
+<p>
+    <ul>
+    <li> <a href="#part-1-tools">Part 1. Tools</a></li>
+    <li><a href="#part-2-setup-the-configurations">Part 2. Setup the configurations </a></li>
+    <li><a href="#part-3-script">Part 3. Script</a></li>
+    </ul>
+</p>
+
+___
+
+
 Let's start Installing **Homebrew**
 
 # Part 1. Tools
@@ -181,3 +196,5 @@ brew install --cask font-fira-code-nerd-font
 Hopefully that works! Otherwise, try installing manually right here: https://www.nerdfonts.com
 
 And that's it!!
+
+# Part 3. Script
