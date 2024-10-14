@@ -18,7 +18,13 @@ Let's start Installing **Homebrew**
 Open your terminal and install Homebrew
 ### With sudo permissions
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+git clone https://github.com/Homebrew/brew homebrew
+```
+and then run this:
+```bash
+eval "$(homebrew/bin/brew shellenv)"
+brew update --force --quiet
+chmod -R go-w "$(brew --prefix)/share/zsh"
 ```
 
 Done! Should work perfectly right now. If this do not work, follow the manual: https://brew.sh
@@ -57,8 +63,8 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 Done! Should work perfectly right now. If this do not work, follow the manual: https://sw.kovidgoyal.net/kitty/binary/
 
 ## Neovim
+It is supposed that neovim is already installed in this point, if not, run this simple command
 
-Finally, let's install neovim with this simple command
 ```bash
 brew install neovim
 ```
@@ -108,6 +114,8 @@ ln -s ~/.dotfiles/nvim/ ~/.config/
 ```
 
 ### Install TMUX
+It is supposed that tmux is already installed, if not run this:
+
 ```bash
 brew install tmux
 ```
@@ -151,19 +159,25 @@ tmux source ~/.tmux.conf
 ```
 
 ### LAZYVIM
+Lazyvim is probably already installed, if not, run this:
+
 ```bash
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-### Last things
+### Last things: Nerdfont
 Now let's just adjust little things to start rocking, installing some plugins to our terminal
+
 ```bash
-brew install lsd
-brew install btop
-brew install htop
-brew install neofetch
 brew install nerdfetch
 ```
+to use the nerdfont that I am using run this command:
+
+```bash
+brew install --cask font-fira-code-nerd-font
+```
+
+Hopefully that works! Otherwise, try installing manually right here: https://www.nerdfonts.com
 
 And that's it!!
