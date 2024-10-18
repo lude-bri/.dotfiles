@@ -70,3 +70,4 @@ fi
 if [[ -f ~/.config/google-chrome/Singleton* ]]; then
 	rm -rf ~/.config/google-chrome/Singleton*
 fi
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
