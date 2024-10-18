@@ -44,6 +44,9 @@ plug "zsh-users/zsh-syntax-highlighting"
 autoload -Uz compinit
 compinit
 
+# Suppress zsh compinit insecure directory warning
+zstyle ':compaudit' warn no
+
 [ -d "$HOME/sgoinfre/Homebrew/bin" ] &&
 export PATH="$PATH:$HOME/sgoinfre/Homebrew/bin"
 export PATH="$HOME/.local/bin:$PATH"
