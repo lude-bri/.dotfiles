@@ -55,21 +55,20 @@ export PATH="$HOME/.local/bin:$PATH"
 ### Load Starship Prompt ###
 ############################
 
-
+# Old Prompt
 # PROMPT='%F{green}% %BI am Luigi%b %f %F{yellow}% (%f %F{red}% not Mario%f %F{yellow}%)%f %F{blue}% %B%C%b %f %F{yellow}% %B->%b%f %F{red}${vcs_info_msg_0_}%f% '
 
+# New Prompt
 if command -v starship > /dev/null 2>&1; then
   eval "$(starship init zsh)"
 else
   echo "Starship is not installed"
 fi
 
-
-#######################################
-
 #####################################
 ### Clear google-chrome ingleton* ###
 #####################################
+
 if [[ -f ~/.config/google-chrome/Singleton* ]]; then
 	rm -rf ~/.config/google-chrome/Singleton*
 fi
