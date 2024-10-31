@@ -54,8 +54,3 @@ Plug 'linusng/green-shades.vim'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
-
-" Colour
-
-colorscheme tokyodark
-
