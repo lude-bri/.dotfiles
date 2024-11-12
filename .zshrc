@@ -60,9 +60,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # New Prompt
 if command -v starship > /dev/null 2>&1; then
-  eval "$(starship init zsh)"
+ eval "$(starship init zsh)"
 else
-  echo "Starship is not installed"
+ echo "Starship is not installed"
 fi
 
 #####################################
