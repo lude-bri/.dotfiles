@@ -193,6 +193,15 @@ to use the nerdfont that I am using run this command:
 brew install --cask font-fira-code-nerd-font
 ```
 
+Also, for you to make Telescope works, you need to download ripgrep, so:
+
+```bash
+sudo apt install ripgrep
+or
+brew install ripgrep
+brew install fd
+```
+
 Hopefully that works! Otherwise, try installing manually right here: https://www.nerdfonts.com
 
 And that's it!!
