@@ -26,6 +26,9 @@ return {
       highlights.LspFloatWinBorder = {fg = "#645dd7"}
       highlights.LspInfoBorder = {fg = "#645dd7"}
       highlights.LspFloatBorder = {fg = "#645dd7"}
+      highlights.SnacksDashboardTitle = {fg = "#00fff0"}
+      highlights.SnacksDashboardKey = {fg = "#D7A65F"}
+      highlights.SnacksDashboardHeader = {fg = "#5BF5AE"}
       return highlights
     end,
     -- Optionally, you can also adjust the color palette here
