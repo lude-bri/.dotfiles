@@ -438,13 +438,13 @@ math.randomseed( os.time() )
   end
 
 return {
-  "goolord/alpha-nvim",
-  dependencies = 'kyazdani42/nvim-web-devicons',
-  config = function ()
-    if (options ~= nil) then
-      require'alpha'.setup(options)
-    end
-  end
+  -- "goolord/alpha-nvim",
+  -- dependencies = 'kyazdani42/nvim-web-devicons',
+  -- config = function ()
+  --   if (options ~= nil) then
+  --     require'alpha'.setup(options)
+  --   end
+  -- end
 }
 
 
