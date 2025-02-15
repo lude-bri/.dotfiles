@@ -4,7 +4,7 @@ return {
   lazy = false,
   opts = {
     -- Adjust the default config here
-    transparent_background = false,
+    transparent_background = true,
     gamma = 1.00,
     styles = {
       comments = { italic = true },
