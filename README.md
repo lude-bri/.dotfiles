@@ -57,7 +57,9 @@ after this commands, use:
 ```bash
 mkdir -p ~/.local/bin &&
 ln -s ~/.local/Homebrew/bin/brew ~/.local/bin
-https://nelsonaloysio.medium.com/installing-homebrew-without-sudo-5e708a929522
+
+//source:
+//https://nelsonaloysio.medium.com/installing-homebrew-without-sudo-5e708a929522
 ```
 >[!NOTE]
 >If you're at 42 school, instead of using ~/.local use ~/.sgoinfre
