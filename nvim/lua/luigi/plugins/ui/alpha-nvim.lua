@@ -1,7 +1,7 @@
 -- Alpha (dashboard) for neovim
 
-local options
-
+-- local options
+--
 -- For random header
 math.randomseed( os.time() )
   -- Create button for initial keybind.
@@ -20,6 +20,7 @@ math.randomseed( os.time() )
       width          = 50,
       align_shortcut = "right",
       hl_shortcut    = hl,
+      hl             = hl,
     }
 
     if keybind then
@@ -386,11 +387,9 @@ math.randomseed( os.time() )
     type = "group",
     val = {
       button("e", "  > New file",            'RainbowRed', ':tabnew<CR>'),
-      button("f", "  > Find file",             'RainbowYellow', ':Telescope find_files<CR>'),
-      button("l", "  > Get Lazy",              'RainbowCyan', ':Lazy<CR>'),
-      button("h", "  > Recently opened files", 'RainbowBlue', ':Telescope oldfiles<CR>'),
-      button("m", "  > Get Mason",             'RainbowViolet', ':Mason<CR>'),
-      button("q","  > Quit NVIM",               'RainbowYellow', ':qa<CR>'),
+      button("f", "  > Find file",             'RainbowYellow', ':Telescope find_files<CR>'),
+      button("h", "  > Recently opened files", 'RainbowBlue', ':Telescope oldfiles<CR>'),
+      button("q","  > Quit NVIM",               'RainbowYellow', ':qa<CR>'),
     },
     opts = {
       spacing = 1,

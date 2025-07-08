@@ -10,8 +10,8 @@ alias clear_nvim="rm -rf ~/.local/share/nvim"
 alias cl="clear"
 
 ## lists
-alias ll="lsd -la"
-alias l="lsd"
+alias ll="ls -la"
+alias l="ls"
 
 ## gits
 alias ga="git add"
@@ -28,7 +28,7 @@ if [[ $USER == "lude-bri" ]]; then
 	alias kitty=~/.local/kitty.app/bin/kitty
 fi
 alias k="kitty --start-as=fullscreen"
-alias g="ghostty"
+# alias g="ghostty"
 
 #######################
 #        ZAP          #
