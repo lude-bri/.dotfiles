@@ -1194,11 +1194,11 @@ IT IS TIME TO FUCKING DIE (with love) ]],
       desc = "Notification History",
     },
     {
-      "<leader>e",
-      function()
-        Snacks.explorer()
-      end,
-      desc = "File Explorer",
+      -- "<leader>e",
+      -- function()
+      --   Snacks.explorer()
+      -- end,
+      -- desc = "File Explorer",
     },
     -- find
     {
